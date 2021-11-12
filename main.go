@@ -21,7 +21,7 @@ func main() {
 	fn := func(items []*kyaml.RNode) ([]*kyaml.RNode, error) {
 		// use kyaml.Parse to add new nodes
 		cm := corev1.ConfigMap{
-			Metadata: metav1.ObjectMeta{
+			ObjectMeta: metav1.ObjectMeta{
 				Name: "from-plugin",
 			},
 			Data: map[string]string{
