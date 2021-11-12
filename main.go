@@ -12,12 +12,12 @@ import (
 	kyaml "sigs.k8s.io/kustomize/kyaml/yaml"
 )
 
-type ValueAnnotator struct {
+type Konfigure struct {
 	Value string `yaml:"value" json:"value"`
 }
 
 func main() {
-	config := new(ValueAnnotator)
+	config := new(Konfigure)
 	fn := func(items []*kyaml.RNode) ([]*kyaml.RNode, error) {
 		// use kyaml.Parse to add new nodes
 		cm := corev1.ConfigMap{
