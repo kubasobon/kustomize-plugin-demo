@@ -1,4 +1,4 @@
-module github.com/kubasobon/konfigure-plugin
+module github.com/kubasobon/kustomize-plugin-demo
 
 go 1.17
 
