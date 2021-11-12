@@ -1,5 +1,5 @@
-apiVersion: transformers.example.co/v1
-kind: ValueAnnotator
+apiVersion: transformers.giantswarm.io/v1
+kind: Konfigure
 metadata:
   name: konfigure-plugin
   annotations:
