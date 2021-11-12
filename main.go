@@ -44,6 +44,7 @@ func main() {
 	}
 	p := framework.SimpleProcessor{Config: config, Filter: kio.FilterFunc(fn)}
 	cmd := command.Build(p, command.StandaloneDisabled, false)
+	command.AddGenerateDockerfile(cmd)
 	if err := cmd.Execute(); err != nil {
 		os.Exit(1)
 	}
