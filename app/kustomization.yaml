@@ -1,0 +1,4 @@
+resources:
+- svc.yaml
+transformers:
+- konfigure-plugin.yaml
