@@ -5,6 +5,6 @@ metadata:
   annotations:
     config.kubernetes.io/function: |
       container:
-        image: docker.io/functions/kp:latest
+        image: example.docker.io/functions/konfigure-plugin:latest
 value: 'important-data'
 
