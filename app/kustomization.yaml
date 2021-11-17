@@ -1,4 +1,4 @@
 resources:
 - svc.yaml
-transformers:
+generators:
 - konfigure-plugin.yaml

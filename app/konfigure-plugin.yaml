@@ -1,11 +1,11 @@
-apiVersion: transformers.giantswarm.io/v1
+apiVersion: generators.giantswarm.io/v1
 kind: Konfigure
 metadata:
   name: konfigure-plugin
   annotations:
     config.kubernetes.io/function: |
-      container:
-        image: docker.io/wttyf00l/konfigure-plugin:latest
+      exec:
+        path: /plugins/konfigure
 data:
   registry: docker.io
   ttl: 24h
