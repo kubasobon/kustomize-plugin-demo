@@ -25,7 +25,8 @@ func main() {
 				Kind:       "ConfigMap",
 			},
 			ObjectMeta: metav1.ObjectMeta{
-				Name: "from-plugin",
+				Name:      "from-plugin",
+				Namespace: "default",
 			},
 			Data: config.Data,
 		}
