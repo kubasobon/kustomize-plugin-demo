@@ -8,4 +8,5 @@ RUN go build -ldflags '-w -s' -v -o /usr/local/bin/function ./
 
 FROM alpine:latest
 COPY --from=builder /usr/local/bin/function /usr/local/bin/function
+WORKDIR /home/plugin
 ENTRYPOINT ["function"]
