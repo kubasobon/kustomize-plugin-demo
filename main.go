@@ -13,13 +13,12 @@ import (
 )
 
 type Konfigure struct {
-	Value string `yaml:"value" json:"value"`
+	Data map[string]string `yaml:"data" json:"data"`
 }
 
 func main() {
 	config := new(Konfigure)
 	fn := func(items []*kyaml.RNode) ([]*kyaml.RNode, error) {
-		// use kyaml.Parse to add new nodes
 		cm := corev1.ConfigMap{
 			TypeMeta: metav1.TypeMeta{
 				APIVersion: "v1",
@@ -28,9 +27,7 @@ func main() {
 			ObjectMeta: metav1.ObjectMeta{
 				Name: "from-plugin",
 			},
-			Data: map[string]string{
-				"value": config.Value,
-			},
+			Data: config.Data,
 		}
 
 		bytes, err := yaml.Marshal(&cm)

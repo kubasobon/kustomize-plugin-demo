@@ -5,6 +5,8 @@ metadata:
   annotations:
     config.kubernetes.io/function: |
       container:
-        image: example.docker.io/functions/konfigure-plugin:latest
-value: 'important-data'
+        image: docker.io/wttyf00l/konfigure-plugin:latest
+data:
+  registry: docker.io
+  ttl: 24h
 
