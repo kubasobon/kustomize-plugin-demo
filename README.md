@@ -1,16 +1,18 @@
 # Kustomize plugin showcase
 
+[DockerHub](https://hub.docker.com/repository/docker/wttyf00l/konfigure-plugin)
+
 Proves we could use containerized tools (like `konfigure`) to modify our
 kustomizations.
 
-`main.go`, containerized as `example.docker.io/functions/konfigure-plugin:latest`, adds a ConfigMap in
+`main.go`, containerized as `docker.io/wttyf00l/konfigure-plugin:latest`, adds a ConfigMap in
 process of modifying existing app resources.
 
 **Requires kustomize v4**
 
 Usage:
 ```
-docker build -t example.docker.io/functions/konfigure-plugin:latest .
+docker build -t docker.io/wttyf00l/konfigure-plugin:latest .
 kustomize build --enable-alpha-plugins app/
 ```
 
@@ -18,7 +20,8 @@ Expected output:
 ```
 apiVersion: v1
 data:
-  value: important-data
+  registry: docker.io
+  ttl: 24h
 kind: ConfigMap
 metadata:
   creationTimestamp: null
