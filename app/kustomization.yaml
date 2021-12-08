@@ -1,5 +1,3 @@
-resources:
-- svc.yaml
 generators:
 - konfigure-plugin.yaml
-namespace: default
+namespace: kuba-flx

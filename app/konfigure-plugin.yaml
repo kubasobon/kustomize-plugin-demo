@@ -6,7 +6,9 @@ metadata:
     config.kubernetes.io/function: |
       exec:
         path: /plugins/konfigure
-data:
-  registry: docker.io
-  ttl: 24h
-
+app_catalog: "control-plane-test-catalog"
+app_destination_namespace: "kuba-flx"
+app_disable_force_upgrade: true
+app_name: "happa"
+app_version: "1.14.0"
+name: "happa"
